@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Data Book</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <h1>Shaquiana Bail Bonds</h1>
+                    <ul>
+                        <li><a href="/info.html">Info</a></li>
+                        <li><a href="/settings.html">Settings</a></li>
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <table class="table">
+            <tr clas="table-header">
+            {%for header in headings%}
+                <th clas="table-cell">{{ header }}</th>
+            {%endfor%}
+            </tr>
+            {%for row in data%}
+            <tr class="table-row">
+            {%for cell in row%}
+                <td class="cell">{{ cell }}</td>
+            {%endfor%}
+            </tr>
+            {%endfor%}
+        </table>
+    </body>
+</html>

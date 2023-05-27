@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Login</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <h1><a href="home.html">Shaquiana Bail Bonds</a></h1>
+                    <ul>
+                        <li><a href="info.html">Info</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    <div id="login">
+        <div class="container">
+            <div id="login-box">
+                <h1>Authorize User</h1>
+                <div id="form-container">
+                    <form action="/login" method="POST" id="login-form">
+                        <label for="passkey">Enter PassKey</label><br>
+                        
+                        <input type="password" name="passkey" id="passkey" placeholder="passkey"><br>
+                       <!---- <button id="show-hide">-->
+                        <i class="fa-solid fa-eye-slash" id="show-passkey"></i>
+                       <!---- </button> -->
+                        <input type='button' id="login-button" value="Sign in"><br>
+                    </form>
+                </div>
+                <a href="">Forgot passkey?</a>
+                <p style='color:red; font-size:13px' id="passMsg"></p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{url_for('static', filename='loginScript.js')}}"></script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport-relative" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+        <title>Home</title>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <h1><a href="home.html">Shaquiana Bail Bonds</a></h1>
+                    <ul>
+                        <li><a href="settings.html">Settings</a></li>
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="base"></div>
+        <div id="text">
+            <!---Using views file and Time package make this message relative to time of day-->
+            <h1 style="color:white">Good Morning!</h1>
+            <h6>What are we doing today?</h6>
+            <form id="button-form">
+                <input type="button" id="info" value="View Database">
+                <input type="button" id="new" value="Create New Entry">
+            </form>
+        </div>
+    </body>
+</html>
