@@ -29,3 +29,7 @@ def settings():
 @views.route("/home.html")
 def home():
     return render_template("home.html")
+
+@views.route("/add.html")
+def add():
+    return render_template("add.html")

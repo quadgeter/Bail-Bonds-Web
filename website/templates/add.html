@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1"/>
+        <title>Settings</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <h1>Shaquiana Bail Bonds</h1>
+                    <ul>
+                        <li><a href="/settings.html">Settings</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="add-entry">
+            <div class="container">
+                <div id="new-entry-box">
+                    <h1>New Inmate</h1>
+                    <div id="form-container">
+                        <form method="POST" id="new-form">
+                            <label for="first-name">First Name</label>
+                            <input type="text" name="first-name" id="first" placeholder="First "><br>
+                            
+                            <label for="last-name">Last Name</label>
+                            <input type='text' name="last-name" id="last" placeholder="Last"><br>
+                           
+                            <label for="id-num">ID Number</label>
+                            <input type="text" id="id-num" name="id-num" placeholder="0000"><br>
+                           
+                            <label for="court-date">Court Date</label>
+                            <input type="text" id="court-date" name="court-date" placeholder="00/00/0000"><br>
+
+                            <label for="bond-amount">Bond Amount</label>
+                            <input name="bond-amount" id="bond-amount" type="number" placeholder="000.00"><br>
+
+                            <label for="bond-paid">Paid</label>
+                            <input type="number" name="bond-paid" id="bond-paid" placeholder="000.000"><br>
+
+                            <label for="charges">Charges</label>
+                            <input type="text" name="charges" id="charges"><br>
+
+                            <label for="contact-name">Contact Name</label>
+                            <input type="text" id="contact-name" name="contact-name" placeholder="First Last"><br>
+
+                            <label for="contact-phone">Contact Phone</label>
+                            <input type="text" name="contact-phone" id="contact-phone"><br>
+                            <input type="button" id="addBtn" value="Add">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
