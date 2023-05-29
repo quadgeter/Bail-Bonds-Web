@@ -4,7 +4,8 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Data Book</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body>
         <div id="header">
@@ -18,19 +19,24 @@
                 </nav>
             </div>
         </div>
-        <table class="table">
-            <tr clas="table-header">
-            {%for header in headings%}
-                <th clas="table-cell">{{ header }}</th>
-            {%endfor%}
-            </tr>
-            {%for row in data%}
-            <tr class="table-row">
-            {%for cell in row%}
-                <td class="cell">{{ cell }}</td>
-            {%endfor%}
-            </tr>
-            {%endfor%}
-        </table>
+       
+        <div id="table-container">
+            <i class="fa-solid fa-user-pen tooltip"></i>
+            <i class="fa-regular fa-plus tooltip" style="color:#04070b;"></i>
+            <table class="table">
+                <tr clas="table-header">
+                {%for header in headings%}
+                    <th clas="table-cell">{{ header }}</th>
+                {%endfor%}
+                </tr>
+                {%for row in data%}
+                <tr class="table-row">
+                {%for cell in row%}
+                    <td class="cell">{{ cell }}</td>
+                {%endfor%}
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
     </body>
 </html>

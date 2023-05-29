@@ -113,6 +113,7 @@ label{
     margin-top: 75px;
     background-color: #f5f5f5;
     bottom: 10px;
+    width: fill;
 }
 
 .table-row{
@@ -128,3 +129,24 @@ label{
 table, th, td{
     border: 1px solid;
 }
+
+#table-container{
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    margin: 90px 0px;
+}
+.fa-regular, .fa-plus{ 
+    position: relative;
+    cursor: pointer;
+    top: 8vh;
+    left: 90vw;
+}
+
+.fa-solid, .fa-user-pen{
+    position: relative;
+    cursor: pointer;
+    top: 8vh;
+    left: 90vw;
+}
+
